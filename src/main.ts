@@ -13,7 +13,7 @@ import { of, delay } from 'rxjs';
 export class AppChild implements OnInit {
   ngOnInit() {
     of('data')
-      .pipe(delay(5000))
+      .pipe(delay(1000))
       .subscribe(() => console.log('DO some heavy task'));
   }
 }
@@ -27,7 +27,7 @@ export class AppChild implements OnInit {
   imports: [AppChild, CommonModule],
 })
 export class App {
-  renderChild = true;
+  renderChild = false;
   render() {
     this.renderChild = !this.renderChild;
   }
