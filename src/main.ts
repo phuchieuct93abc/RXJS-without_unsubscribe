@@ -20,7 +20,7 @@ export class AppChild implements OnInit {
 @Component({
   selector: 'app-root',
   standalone: true,
-  template: `Toggle component 
+  template: ` 
     <button (click)="render()">Render</button>
    <div><app-child *ngIf="renderChild"></app-child></div>
   `,
